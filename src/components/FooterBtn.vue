@@ -1,0 +1,112 @@
+<template>
+  <!-- <button>{{ text }}</button> -->
+  <div v-bind:class="iconName">
+    <div class="tooltip">{{ text }}</div>
+    <span><i v-bind:class="secondClass"></i></span>
+  </div>
+</template>
+
+
+<script>
+export default {
+  name: "FooterBtn",
+  props: {
+    iconName: String,
+    text: String,
+    secondClass: String,
+  },
+};
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.icon:hover span,
+.icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.github:hover,
+.github:hover .tooltip,
+.github:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.facebook:hover,
+.facebook:hover .tooltip,
+.facebook:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.linkedin:hover,
+.linkedin:hover .tooltip,
+.linkedin:hover .tooltip::before {
+  background-color: #2867b2;
+  color: #ffffff;
+}
+.resume:hover,
+.resume:hover .tooltip,
+.resume:hover .tooltip::before {
+  background-color: #8a2be2;
+  color: #ffffff;
+}
+.email:hover,
+.email:hover .tooltip,
+.email:hover .tooltip::before {
+  background-color: #c71610;
+  color: #ffffff;
+}
+</style>
