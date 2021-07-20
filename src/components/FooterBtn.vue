@@ -3,6 +3,7 @@
   <div v-bind:class="iconName">
     <div class="tooltip">{{ text }}</div>
     <span><i v-bind:class="secondClass"></i></span>
+    <v-icon color="#000000" class="v-icons">{{ path }}</v-icon>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ export default {
     iconName: String,
     text: String,
     secondClass: String,
+    path: String,
   },
 };
 </script>
@@ -76,7 +78,7 @@ export default {
 .icon:hover .tooltip {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
-
+.v-icon:hover,
 .github:hover,
 .github:hover .tooltip,
 .github:hover .tooltip::before {
