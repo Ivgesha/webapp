@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <Intro /> -->
-    <!-- <About /> -->
-    <!-- <TechCard /> -->
+    <Intro />
+    <About />
+    <TechCard />
     <ProjectCard />
     <Footer />
   </div>
@@ -12,18 +12,18 @@
 
 <script>
 import Footer from "../components/Footer.vue";
-// import Intro from "../components/Intro.vue";
-// import About from "../components/About.vue";
-// import TechCard from "../components/TechCard.vue";
+import Intro from "../components/Intro.vue";
+import About from "../components/About.vue";
+import TechCard from "../components/TechCard.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 // now we can insert different components.
 export default {
   name: "Landing",
   components: {
     Footer,
-    //  Intro,
-    // About,
-    // TechCard,
+    Intro,
+    About,
+    TechCard,
     ProjectCard,
   },
 };
