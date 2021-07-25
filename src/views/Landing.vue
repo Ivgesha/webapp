@@ -41,7 +41,7 @@ export default {
   width: 100%;
   font-family: "Poppins", sans-serif;
   place-items: center;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+  /* background: linear-gradient(315deg, #ffffff, #d7e1ec); */
   text-align: center;
 }
 </style>
