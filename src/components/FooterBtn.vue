@@ -112,7 +112,7 @@ export default {
   color: #ffffff;
 }
 
-i.v-icon.v-icon {
+/* i.v-icon.v-icon {
   background-color: transparent;
   color: black;
 }
@@ -120,5 +120,5 @@ i.v-icon.v-icon {
 i.v-icon.v-icon:hover {
   background-color: transparent;
   color: white;
-}
+} */
 </style>

@@ -5,7 +5,9 @@
         <div class="techCard-container" v-for="card in cards" :key="card.id">
           <div class="techCard-container--logo">
             <!-- <img src="../assets/vueImage.jpeg" alt="icon image " /> -->
-            <v-icon class="v-icon" xx-large>{{ card.icon }}</v-icon>
+            <v-icon class="v-icon" xx-large color="#000000">{{
+              card.icon
+            }}</v-icon>
           </div>
           <div class="techCard-container--title">{{ card.title }}</div>
           <div
@@ -112,8 +114,8 @@ img {
   box-shadow: 0 40px 60px -6px black;
   background: #bdc3c7;
   border-radius: 3%;
-  width: 350px;
-  height: 700px;
+  width: 300px;
+  height: 600px;
 }
 .techCard-container--title {
   font-size: 2rem;
@@ -122,10 +124,11 @@ img {
   text-align: center;
   justify-content: center;
   margin: 5px 10px;
+  color: #2c3e50;
   /* width: 75%; */
 }
 .techCard-container--techList {
-  font-size: 1.5rem;
+  font-size: 20px;
   text-align: center;
 
   /* width: 75%; */
