@@ -43,5 +43,6 @@ export default {
   place-items: center;
   /* background: linear-gradient(315deg, #ffffff, #d7e1ec); */
   text-align: center;
+  background: #2c3e50;
 }
 </style>

@@ -4,7 +4,11 @@
       <div class="cards-card" v-for="card in cards" :key="card.id">
         <div class="cards-card--container">
           <div class="cards-card--image">
-            <img src="../assets/vueImage.jpeg" alt="picture did not exists " />
+            <img
+              src="../assets/website.png"
+              alt="picture did not
+            exists "
+            />
           </div>
           <div class="cards-card--summary">
             <p>{{ card.summary }}</p>
@@ -25,10 +29,11 @@ export default {
   props: {},
   data: () => {
     return {
+      test: "website.png",
       cards: [
         {
           id: 1,
-          image: "../assets/vueImage.jpeg",
+          image: "../pics/website.png",
           summary: "Portfolio website written with VueJs",
           source: "https://github.com/Ivgesha/webapp",
         },
@@ -77,7 +82,7 @@ export default {
 .cards-container {
   display: flex;
   flex-direction: row;
-  background: #2c3e50;
+  /* background: #2c3e50;*/
 }
 .cards {
   margin: 0;
@@ -107,7 +112,7 @@ export default {
   height: 100%;
   object-fit: cover;
   display: block;
-  position: relative;
+  /* position: relative; */
 }
 
 .cards-card--summary {
@@ -132,6 +137,5 @@ export default {
 }
 .vbtn {
   text-transform: unset !important;
-  color: red;
 }
 </style>

@@ -89,6 +89,7 @@ export default {
   /* background: #2c3e50; */
   /* width: 50%; */
 }
+
 .techCards-techCard {
   margin: 0;
   padding: 0;
@@ -102,6 +103,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 img {
   max-width: 250px;
   max-height: 250px;
@@ -116,6 +118,10 @@ img {
   border-radius: 3%;
   width: 300px;
   height: 600px;
+  transition: 0.5s;
+}
+.techCard-container:hover {
+  margin-top: -10px;
 }
 .techCard-container--title {
   font-size: 2rem;

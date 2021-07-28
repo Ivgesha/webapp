@@ -26,7 +26,7 @@
 
 .evgni-about {
   /* background: linear-gradient(90deg, #005aa7, #fffde4); */
-  background: #2c3e50;
+  /* background: #2c3e50; */
 }
 
 .evgeni-about--title {
