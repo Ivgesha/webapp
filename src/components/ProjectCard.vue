@@ -5,7 +5,7 @@
         <div class="cards-card--container">
           <div class="cards-card--image">
             <img
-              src="../assets/website.png"
+              :src="getImage(card)"
               alt="picture did not
             exists "
             />
@@ -33,46 +33,51 @@ export default {
       cards: [
         {
           id: 1,
-          image: "../pics/website.png",
+          image: "website",
           summary: "Portfolio website written with VueJs",
           source: "https://github.com/Ivgesha/webapp",
         },
         {
           id: 2,
-          image: "../assets/vueImage.jpeg",
+          image: "website",
           summary: "Codility exams with solved algorithms",
           source: "https://github.com/Ivgesha/Codility",
         },
         {
           id: 3,
-          image: "../assets/vueImage.jpeg",
+          image: "website",
           summary:
             "Encrypted and secure phone applications which desighn to store your data",
           source: "https://github.com/Ivgesha/SecureVault2019-1",
         },
         {
           id: 4,
-          image: "../assets/vueImage.jpeg",
+          image: "website",
           summary:
             "Web application which desight to text SQL injections and XSS attacks",
           source: "https://github.com/Ivgesha/communicationLTD",
         },
         {
           id: 5,
-          image: "../assets/vueImage.jpeg",
+          image: "website",
           summary:
             "Dynamic phone application which helps you keep track of your tasks",
           source: "https://github.com/Ivgesha/TodoList",
         },
         {
           id: 6,
-          image: "../assets/vueImage.jpeg",
+          image: "website",
           summary:
             "Educational game for toddlers that teachs about animal kingdom in English",
           source: "https://github.com/Ivgesha/AnimalGame",
         },
       ],
     };
+  },
+  methods: {
+    getImage(card) {
+      return `${require(`../assets/${card.image}.png`)}`;
+    },
   },
 };
 </script>
