@@ -12,7 +12,7 @@
           </div>
           <div class="cards-card--summary">
             <p>{{ card.summary }}</p>
-            <v-btn class="vbtn" :href="card.source" rounded
+            <v-btn class="vbtn" :href="card.source" rounded outlined
               ><span>&#60;</span> /Source <span>&#62;</span></v-btn
             >
           </div>
@@ -39,34 +39,34 @@ export default {
         },
         {
           id: 2,
-          image: "website",
+          image: "Codility",
           summary: "Codility exams with solved algorithms",
           source: "https://github.com/Ivgesha/Codility",
         },
         {
           id: 3,
-          image: "website",
+          image: "SecureVault",
           summary:
             "Encrypted and secure phone applications which desighn to store your data",
           source: "https://github.com/Ivgesha/SecureVault2019-1",
         },
         {
           id: 4,
-          image: "website",
+          image: "CommunicationLTD",
           summary:
             "Web application which desight to text SQL injections and XSS attacks",
           source: "https://github.com/Ivgesha/communicationLTD",
         },
         {
           id: 5,
-          image: "website",
+          image: "todo",
           summary:
             "Dynamic phone application which helps you keep track of your tasks",
           source: "https://github.com/Ivgesha/TodoList",
         },
         {
           id: 6,
-          image: "website",
+          image: "animals",
           summary:
             "Educational game for toddlers that teachs about animal kingdom in English",
           source: "https://github.com/Ivgesha/AnimalGame",
@@ -107,14 +107,15 @@ export default {
 .cards-card {
   margin: 40px;
   position: relative;
+  justify-content: center;
   max-width: 350px;
-  max-height: 550px;
+  max-height: 166px;
   box-shadow: 0 40px 60px -6px black;
 }
 
 .cards-card img {
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: 166px;
   object-fit: cover;
   display: block;
   /* position: relative; */
@@ -132,7 +133,7 @@ export default {
   background-color: white;
   /* overflow-y: scroll; */
   transition: 0.6s ease;
-  padding: 40px;
+  /* padding: 40px; */
 }
 
 .cards-card:hover .cards-card--summary {

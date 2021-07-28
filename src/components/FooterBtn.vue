@@ -1,6 +1,10 @@
 <template>
   <!-- <button>{{ text }}</button> -->
-  <div v-bind:class="iconName">
+  <div
+    v-bind:class="iconName"
+    style="cursor: pointer"
+    v-on:click="clickEventHandler(text)"
+  >
     <div class="tooltip">{{ text }}</div>
     <span><i v-bind:class="secondClass"></i></span>
     <v-icon class="v-icons">{{ path }}</v-icon>
@@ -9,6 +13,13 @@
 
 
 <script>
+import {
+  EmailLinker,
+  GithubLinker,
+  LinkedInLinker,
+  FacebookLinker,
+  ResumeLinker,
+} from ".././configs";
 export default {
   name: "FooterBtn",
   props: {
@@ -16,6 +27,31 @@ export default {
     text: String,
     secondClass: String,
     path: String,
+  },
+  methods: {
+    clickEventHandler: (name) => {
+      let linker;
+      switch (name) {
+        case "Email":
+          linker = EmailLinker;
+          break;
+        case "Github":
+          linker = GithubLinker;
+          break;
+        case "Linkedin":
+          linker = LinkedInLinker;
+          break;
+        case "Facebook":
+          linker = FacebookLinker;
+          break;
+        case "Resume":
+          linker = ResumeLinker;
+          break;
+        default:
+          linker = LinkedInLinker;
+      }
+      window.location.href = linker;
+    },
   },
 };
 </script>
