@@ -7,11 +7,7 @@
       I build and code softwares, and I love what i'm doing!
     </div>
     <div class="evgeni-intro-container--img">
-      <img
-        class="into-img"
-        src="../assets/avatar.png"
-        alt="insert image here"
-      />
+      <img class="into-img" src="../assets/EvgeniPic.png" alt="Picture" />
     </div>
   </div>
 </template>
@@ -22,6 +18,7 @@
 </script>
 
 <style >
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,300;1,700&family=Coming+Soon&display=swap");
 .evgeni-intro-container {
   display: grid;
   height: 100%;
@@ -53,6 +50,6 @@
 }
 .into-img {
   width: 20rem;
-  height: 25rem;
+  height: 22rem;
 }
 </style>

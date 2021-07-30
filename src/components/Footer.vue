@@ -80,4 +80,7 @@ footer {
   margin-bottom: 4ex;
   display: inline-flex;
 }
+.footer--container-copyright {
+  margin: 1rem;
+}
 </style>

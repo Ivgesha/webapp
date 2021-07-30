@@ -1,6 +1,6 @@
 <template>
   <div class="evgni-about">
-    <div class="evgeni-about--title">Hi, Im Evgeni</div>
+    <div class="evgeni-about--title">Hey, I'm Evgeni</div>
     <div class="evgeni-about--paragraph">
       <p>
         For the past three years I studied computer science and wrote different
@@ -13,21 +13,28 @@
         curiosity, with a lot of passion to discover and learn more.
       </p>
     </div>
+    <v-btn id="abountBtn" large rounded v-on:click="getResume()">
+      Get my Resume
+    </v-btn>
   </div>
 </template>
 
 <script>
+import { ResumeLinker } from ".././configs";
+export default {
+  name: "About",
+  methods: {
+    getResume: () => {
+      window.location.href = ResumeLinker;
+    },
+  },
+};
 </script>
 
 
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-.evgni-about {
-  /* background: linear-gradient(90deg, #005aa7, #fffde4); */
-  /* background: #2c3e50; */
-}
 
 .evgeni-about--title {
   padding-top: 20px;
@@ -37,10 +44,24 @@
 }
 
 .evgeni-about--paragraph {
-  width: 50%;
+  width: 80%;
   color: white;
 }
 .evgeni-about--paragraph {
   font-size: large;
+}
+
+#abountBtn {
+  margin: 2%;
+  font-weight: bold;
+  transition: 0.5s;
+  font-size: 1rem;
+  background-color: #1a2530;
+  color: #007373;
+}
+
+#abountBtn:hover {
+  background-color: #007373;
+  color: white;
 }
 </style>

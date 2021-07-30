@@ -7,7 +7,7 @@
   >
     <div class="tooltip">{{ text }}</div>
     <span><i v-bind:class="secondClass"></i></span>
-    <v-icon class="v-icons">{{ path }}</v-icon>
+    <v-icon color="#000000">{{ path }}</v-icon>
   </div>
 </template>
 
@@ -157,4 +157,8 @@ i.v-icon.v-icon:hover {
   background-color: transparent;
   color: white;
 } */
+
+#vutify-icon::before {
+  color: #000000;
+}
 </style>

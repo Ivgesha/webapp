@@ -4,6 +4,7 @@
     <About />
     <TechCard />
     <ProjectCard />
+    <RecommendationSlider />
     <Footer />
   </div>
 </template>
@@ -16,6 +17,7 @@ import Intro from "../components/Intro.vue";
 import About from "../components/About.vue";
 import TechCard from "../components/TechCard.vue";
 import ProjectCard from "../components/ProjectCard.vue";
+import RecommendationSlider from "../components/RecommendationSlider.vue";
 // now we can insert different components.
 export default {
   name: "Landing",
@@ -25,6 +27,7 @@ export default {
     About,
     TechCard,
     ProjectCard,
+    RecommendationSlider,
   },
 };
 </script>
@@ -43,6 +46,7 @@ export default {
   place-items: center;
   /* background: linear-gradient(315deg, #ffffff, #d7e1ec); */
   text-align: center;
-  background: #2c3e50;
+  /* background: #2c3e50; */
+  background: linear-gradient(90deg, #2c3e50, #78aade);
 }
 </style>

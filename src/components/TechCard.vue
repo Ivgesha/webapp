@@ -80,7 +80,7 @@ export default {
   font-size: 50px;
 }
 .techCards-back {
-  background: #2c3e50;
+  /* background: #2c3e50; */
   padding: 50px;
 }
 .techCards {
