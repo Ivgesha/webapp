@@ -61,7 +61,7 @@ export default {
 
 .icon {
   position: relative;
-  background-color: #ffffff;
+  background-color: #c5c6c7;
   border-radius: 50%;
   padding: 15px;
   margin: 10px;

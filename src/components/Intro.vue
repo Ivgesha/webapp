@@ -35,10 +35,12 @@
   font-weight: 800;
   font-size: xx-large;
   margin: 2%;
+  color: #66fcf1;
 }
 .evgeni-intro-container--subtitle {
   font-size: large;
   margin-bottom: 2%;
+  color: #45a29e;
 }
 .evgeni-intro-container--img {
   width: 100%;

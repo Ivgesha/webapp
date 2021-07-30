@@ -130,7 +130,7 @@ export default {
   top: 0;
   opacity: 0;
   padding: 18px;
-  background-color: white;
+  background-color: #c5c6c7;
   /* overflow-y: scroll; */
   transition: 0.6s ease;
   /* padding: 40px; */
@@ -143,5 +143,6 @@ export default {
 }
 .vbtn {
   text-transform: unset !important;
+  font-weight: bold;
 }
 </style>

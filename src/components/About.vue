@@ -45,7 +45,7 @@ export default {
 
 .evgeni-about--paragraph {
   width: 80%;
-  color: white;
+  color: #c5c6c7;
 }
 .evgeni-about--paragraph {
   font-size: large;
@@ -56,7 +56,7 @@ export default {
   font-weight: bold;
   transition: 0.5s;
   font-size: 1rem;
-  background-color: #1a2530;
+  background: #1a2530;
   color: #007373;
 }
 

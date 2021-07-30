@@ -1,9 +1,12 @@
 <template>
   <div class="slide-recommandation">
     <div class="slide-recommandation-container" :data="recommendation">
+      <div class="slide-recommandation-container--RecTitle">
+        Recommendations
+      </div>
       <div>
         <img
-          class="recPicture"
+          class="slide-recommandation-container--recPicture"
           :src="recommendation[recIndex].recImg"
           :alt="recommendation[recIndex].recAlt"
         />
@@ -14,7 +17,7 @@
       <div class="slide-recommandation-container--recPos">
         <span>{{ recommendation[recIndex].recPos }}</span>
       </div>
-      <div>
+      <div class="slide-recommandation-container--recPar">
         <p>{{ recommendation[recIndex].recPar }}</p>
       </div>
       <div>
@@ -29,7 +32,6 @@
 <script>
 export default {
   name: "RecommendationSlider",
-
   data: () => {
     return {
       recommendation: [
@@ -45,7 +47,7 @@ export default {
         {
           recImg:
             "https://media-exp1.licdn.com/dms/image/C4E03AQHX9InGA_SPuw/profile-displayphoto-shrink_100_100/0/1549802056022?e=1632960000&v=beta&t=asJljt3ZJVoKsqKdG2_-y6hVBn48sF_WC8m8CfOZflk",
-          recAlt: "Eliyahu",
+          recAlt: "Eliyahu Kriel",
           recPos: "Frontend Developer at Devalore",
           recPar:
             '" I worked with Evgeni at 019 Mobile for almost a year. Evgeni is a very talented, smart and creative Developer. Always accepted the complex tasks, and made sure to do them in the best way with a very impressive level of performance. Evgeni is excellent at teamwork, professional dialogue, mutual help, always shares the knowledge he has, and if he does not know something - he is not ashamed to ask - and learns very quickly. I recommend Evgeni as a professional Developer, is in constant learning, smart and thorough. "',
@@ -66,7 +68,7 @@ export default {
   background: transparent;
   margin-bottom: 10rem;
 }
-.recPicture {
+.slide-recommandation-container--recPicture {
   cursor: pointer;
   width: 6rem;
   height: 6rem;
@@ -79,8 +81,18 @@ export default {
   font-size: 1.5rem;
   margin-top: 1rem;
   font: bold;
+  color: #45a29e;
 }
 .slide-recommandation-container--recPos {
   margin-bottom: 1.5rem;
+  color: #45a29e;
+}
+.slide-recommandation-container--RecTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #66fcf1;
+}
+.slide-recommandation-container--recPar {
+  color: #c5c6c7;
 }
 </style>

@@ -99,7 +99,6 @@ export default {
   align-items: center;
   /* background-color: #34495e; */
   width: 100%;
-  height: 800px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -114,10 +113,10 @@ img {
   border-style: solid;
   border-color: transparent;
   box-shadow: 0 40px 60px -6px black;
-  background: #bdc3c7;
+  background: #c5c6c7;
   border-radius: 3%;
-  width: 300px;
-  height: 600px;
+  width: 250px;
+  height: 500px;
   transition: 0.5s;
 }
 .techCard-container:hover {
