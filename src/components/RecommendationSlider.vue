@@ -4,25 +4,35 @@
       <div class="slide-recommandation-container--RecTitle">
         Recommendations
       </div>
-      <div>
-        <img
-          class="slide-recommandation-container--recPicture"
-          :src="dataObj.recommendation[dataObj.recIndex].recImg"
-          :alt="dataObj.recommendation[dataObj.recIndex].recAlt"
-        />
-      </div>
-      <div class="slide-recommandation-container--recName">
-        <span>{{ dataObj.recommendation[dataObj.recIndex].recName }}</span>
-      </div>
-      <div class="slide-recommandation-container--recPos">
-        <span>{{ dataObj.recommendation[dataObj.recIndex].recPos }}</span>
-      </div>
-      <div class="slide-recommandation-container--recPar">
-        <p>{{ dataObj.recommendation[dataObj.recIndex].recPar }}</p>
-      </div>
-      <div>
-        <span class="slideLocation">{{ dataObj.recommendation.recIndex }}</span>
-      </div>
+      <transition name="slide-fade" mode="out-in">
+        <div :key="dataObj.recIndex">
+          <div>
+            <img
+              class="slide-recommandation-container--recPicture"
+              :src="dataObj.recommendation[dataObj.recIndex].recImg"
+              :alt="dataObj.recommendation[dataObj.recIndex].recAlt"
+            />
+          </div>
+          <div class="slide-recommandation-container--recName">
+            <span>{{ dataObj.recommendation[dataObj.recIndex].recName }}</span>
+          </div>
+          <div class="slide-recommandation-container--recPos">
+            <span>{{ dataObj.recommendation[dataObj.recIndex].recPos }}</span>
+          </div>
+          <div class="slide-recommandation-container--recPar">
+            <p>{{ dataObj.recommendation[dataObj.recIndex].recPar }}</p>
+          </div>
+          <div>
+            <ul class="slide-recommandation-container--points">
+              <div
+                v-for="(point, index) in dataObj.recommendation"
+                :key="index"
+                :class="getDot(index)"
+              ></div>
+            </ul>
+          </div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -77,6 +87,9 @@ export default {
         this.dataObj.recIndex += 1;
       }
     },
+    getDot(index) {
+      return index == this.dataObj.recIndex ? "selectedDot" : "regularDot";
+    },
   },
 
   mounted() {
@@ -90,7 +103,8 @@ export default {
 
 <style scoped>
 .slide-recommandation {
-  max-width: 1000px;
+  width: 60%;
+  height: 250px;
   position: relative;
   margin: auto;
   background: transparent;
@@ -122,5 +136,35 @@ export default {
 }
 .slide-recommandation-container--recPar {
   color: #c5c6c7;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+.slide-recommandation-container--points {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.regularDot {
+  margin: 0.5rem;
+  background-color: #c5c6c7;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+.selectedDot {
+  margin: 0.5rem;
+  background-color: #45a29e;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
 }
 </style>

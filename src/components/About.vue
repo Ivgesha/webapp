@@ -5,7 +5,7 @@
       <p>
         For the past three years I studied computer science and wrote different
         softwares while working both independently and during my work. I have
-        experience in variety of programming languages and frameworks.At my
+        experience in variety of programming languages and frameworks. At my
         current work I had the opportunity to design and code from scratch data
         transfer software using Oracle database and HTTP requests, build Task
         Scheduler for Oracle functions and linux commands and implemented
