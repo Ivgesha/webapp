@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <Intro />
-    <About />
-    <TechCard />
-    <ProjectCard />
-    <RecommendationSlider />
-    <Footer />
+  <div id="superdiv">
+    <div class="masterDiv">
+      <Intro />
+      <About />
+      <TechCard />
+      <ProjectCard />
+      <RecommendationSlider />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -40,6 +42,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
   display: grid;
+  grid-gap: 10px;
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;

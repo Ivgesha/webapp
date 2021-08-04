@@ -53,7 +53,7 @@ export default {
 <style >
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -63,9 +63,9 @@ export default {
 *:active {
   outline: none !important;
   -webkit-tap-highlight-color: transparent;
-}
+} */
 
-footer {
+.footer {
   display: grid;
   height: 100%;
   width: 100%;
@@ -73,10 +73,11 @@ footer {
   place-items: center;
   /* background: linear-gradient(315deg, #ffffff, #d7e1ec); */
   text-align: center;
+  margin: 100px;
 }
 
 .footer--container-buttons {
-  margin-top: 4ex;
+  margin-top: 50px;
   margin-bottom: 4ex;
   display: inline-flex;
 }

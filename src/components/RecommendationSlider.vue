@@ -28,6 +28,7 @@
                 v-for="(point, index) in dataObj.recommendation"
                 :key="index"
                 :class="getDot(index)"
+                v-on:click="pointClick(index)"
               ></div>
             </ul>
           </div>
@@ -40,6 +41,8 @@
 
 
 <script>
+let timer;
+const TIME_FOR_INTERVAL = 5000;
 export default {
   name: "RecommendationSlider",
   data: () => {
@@ -70,6 +73,10 @@ export default {
   },
   props: {
     recIndex: Number,
+    interval: {
+      type: Number,
+      default: 0,
+    },
   },
   methods: {
     nextSlide() {
@@ -90,12 +97,33 @@ export default {
     getDot(index) {
       return index == this.dataObj.recIndex ? "selectedDot" : "regularDot";
     },
+    pointClick() {
+      console.log("Button under construction :)");
+      let x = 1;
+      if (x == 1) return;
+      clearTimeout(timer);
+      this.startInterval();
+      // this.$set(this.dataObj, "recIndex", index);
+    },
+    startInterval: () => {
+      this.setIntervalProp(TIME_FOR_INTERVAL);
+      timer = setInterval(() => {
+        this.nextSlide();
+      }, this.interval);
+    },
+    setIntervalProp: () => {
+      this.interval = TIME_FOR_INTERVAL;
+    },
   },
 
   mounted() {
-    this.interval = setInterval(() => {
-      this.nextSlide();
-    }, 10000);
+    if (this.interval) {
+      this.startInterval();
+    } else {
+      timer = setInterval(() => {
+        this.nextSlide();
+      }, TIME_FOR_INTERVAL);
+    }
   },
 };
 </script>
@@ -103,12 +131,13 @@ export default {
 
 <style scoped>
 .slide-recommandation {
-  width: 60%;
-  height: 250px;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  /* width: 100%; */
+  position: flex;
   margin: auto;
-  background: transparent;
-  margin-bottom: 10rem;
+  /* background: linear-gradient(90deg, #0b0c10, #1f2833); */
+  /* margin-bottom: 10rem; */
 }
 .slide-recommandation-container--recPicture {
   cursor: pointer;
@@ -117,7 +146,14 @@ export default {
   border-radius: 50%;
 }
 .slide-recommandation-container {
-  color: #ffffff;
+  width: 60%;
+  height: 450px;
+}
+@media only screen and (max-width: 1200px) {
+  .slide-recommandation-container {
+    width: 60%;
+    height: 650px;
+  }
 }
 .slide-recommandation-container--recName {
   font-size: 1.5rem;
@@ -154,6 +190,7 @@ export default {
   justify-content: center;
 }
 .regularDot {
+  cursor: pointer;
   margin: 0.5rem;
   background-color: #c5c6c7;
   height: 10px;
@@ -161,6 +198,7 @@ export default {
   border-radius: 50%;
 }
 .selectedDot {
+  cursor: pointer;
   margin: 0.5rem;
   background-color: #45a29e;
   height: 10px;

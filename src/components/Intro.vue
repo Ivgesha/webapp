@@ -27,7 +27,7 @@
   /* background: linear-gradient(315deg, #ffffff, #d7e1ec);*/
   /* background: linear-gradient(90deg, #005aa7, #fffde4); */
   /* background: #2c3e50; */
-  color: white;
+  /* color: white; */
   text-align: center;
 }
 .evgeni-intro-container--title {
