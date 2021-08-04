@@ -1,6 +1,6 @@
 <template>
-  <div id="superdiv">
-    <div class="masterDiv">
+  <div id="master-div">
+    <div>
       <Intro />
       <About />
       <TechCard />

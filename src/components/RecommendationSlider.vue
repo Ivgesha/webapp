@@ -42,7 +42,7 @@
 
 <script>
 let timer;
-const TIME_FOR_INTERVAL = 5000;
+const TIME_FOR_INTERVAL = 10000;
 export default {
   name: "RecommendationSlider",
   data: () => {
@@ -190,7 +190,7 @@ export default {
   justify-content: center;
 }
 .regularDot {
-  cursor: pointer;
+  /* cursor: pointer; */
   margin: 0.5rem;
   background-color: #c5c6c7;
   height: 10px;
@@ -198,7 +198,7 @@ export default {
   border-radius: 50%;
 }
 .selectedDot {
-  cursor: pointer;
+  /* cursor: pointer; */
   margin: 0.5rem;
   background-color: #45a29e;
   height: 10px;

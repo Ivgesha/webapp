@@ -56,8 +56,10 @@ export default {
   font-weight: bold;
   transition: 0.5s;
   font-size: 1rem;
-  background: #1a2530;
-  color: #007373;
+  /* background: #1a2530; */
+  background: #007373;
+  /* color: #007373; */
+  color: #c5c6c7;
 }
 
 #abountBtn:hover {
