@@ -158,7 +158,7 @@ i.v-icon.v-icon:hover {
   color: white;
 } */
 
-#vutify-icon::before {
+/* #vutify-icon::before {
   color: #000000;
-}
+} */
 </style>

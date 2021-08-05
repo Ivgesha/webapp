@@ -79,6 +79,7 @@ export default {
     },
   },
   methods: {
+    imgClick() {},
     nextSlide() {
       // maybe use this.$set(this.dataObj, "recIndex", temp);
       // or just use  this.dataObj.recIndex; + 1;
@@ -140,7 +141,7 @@ export default {
   /* margin-bottom: 10rem; */
 }
 .slide-recommandation-container--recPicture {
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
