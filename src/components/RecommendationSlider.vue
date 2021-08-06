@@ -11,6 +11,7 @@
               class="slide-recommandation-container--recPicture"
               :src="dataObj.recommendation[dataObj.recIndex].recImg"
               :alt="dataObj.recommendation[dataObj.recIndex].recAlt"
+              v-on:click="imgClick(dataObj, dataObj.recIndex)"
             />
           </div>
           <div class="slide-recommandation-container--recName">
@@ -57,6 +58,7 @@ export default {
             recPos: "System And Network Manager at 019Mobile",
             recPar:
               '" Evgeni is very talented guy with excellent learning skills and great teamwork player, I have the pleasure to work with him on different projects and learning from his knowledge. He is happy to assist in any time and know how to push things forward, on top all of that Evgeni is reliable and fun guy to work with him. "',
+            recPage: "https://www.linkedin.com/in/gil-nagar-6a067a17b/",
           },
           {
             recImg:
@@ -65,6 +67,7 @@ export default {
             recPos: "Frontend Developer at Devalore",
             recPar:
               '" I worked with Evgeni at 019 Mobile for almost a year. Evgeni is a very talented, smart and creative Developer. Always accepted the complex tasks, and made sure to do them in the best way with a very impressive level of performance. Evgeni is excellent at teamwork, professional dialogue, mutual help, always shares the knowledge he has, and if he does not know something - he is not ashamed to ask - and learns very quickly. I recommend Evgeni as a professional Developer, is in constant learning, smart and thorough. "',
+            recPage: "https://www.linkedin.com/in/elikri/",
           },
         ],
         recIndex: 0,
@@ -79,7 +82,9 @@ export default {
     },
   },
   methods: {
-    imgClick() {},
+    imgClick: (dataObj, index) => {
+      window.location.href = dataObj.recommendation[index].recPage;
+    },
     nextSlide() {
       // maybe use this.$set(this.dataObj, "recIndex", temp);
       // or just use  this.dataObj.recIndex; + 1;
@@ -141,7 +146,7 @@ export default {
   /* margin-bottom: 10rem; */
 }
 .slide-recommandation-container--recPicture {
-  /* cursor: pointer; */
+  cursor: pointer;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
