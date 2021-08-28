@@ -11,8 +11,9 @@ Vue.use(VueRouter);
 Vue.use(VueI18n);
 
 const router = new VueRouter({
-  routes: Routes,
-  mode: 'history'
+  mode: 'history',
+  routes: Routes
+
 })
 new Vue({
   vuetify,
