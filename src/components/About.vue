@@ -26,6 +26,7 @@ export default {
   methods: {
     getResume: () => {
       window.location.href = ResumeLinker;
+      // window.open(ResumeLinker, "_blank");
     },
   },
 };

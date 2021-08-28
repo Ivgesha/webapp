@@ -72,18 +72,19 @@ export default {
         ],
         recIndex: 0,
       },
+      interval: 0,
     };
   },
   props: {
     recIndex: Number,
-    interval: {
-      type: Number,
-      default: 0,
-    },
+  },
+  mounted() {
+    this.setTimer();
   },
   methods: {
     imgClick: (dataObj, index) => {
       window.location.href = dataObj.recommendation[index].recPage;
+      // window.open(dataObj.recommendation[index].recPage, "_blank");
     },
     nextSlide() {
       // maybe use this.$set(this.dataObj, "recIndex", temp);
@@ -103,33 +104,16 @@ export default {
     getDot(index) {
       return index == this.dataObj.recIndex ? "selectedDot" : "regularDot";
     },
-    pointClick() {
-      console.log("Button under construction :)");
-      let x = 1;
-      if (x == 1) return;
+    pointClick(index) {
+      this.dataObj.recIndex = index;
       clearTimeout(timer);
-      this.startInterval();
-      // this.$set(this.dataObj, "recIndex", index);
+      this.setTimer();
     },
-    startInterval: () => {
-      this.setIntervalProp(TIME_FOR_INTERVAL);
-      timer = setInterval(() => {
-        this.nextSlide();
-      }, this.interval);
-    },
-    setIntervalProp: () => {
-      this.interval = TIME_FOR_INTERVAL;
-    },
-  },
-
-  mounted() {
-    if (this.interval) {
-      this.startInterval();
-    } else {
+    setTimer: function () {
       timer = setInterval(() => {
         this.nextSlide();
       }, TIME_FOR_INTERVAL);
-    }
+    },
   },
 };
 </script>

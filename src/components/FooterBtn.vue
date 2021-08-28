@@ -50,7 +50,11 @@ export default {
         default:
           linker = LinkedInLinker;
       }
+      // if (name == "Email") {
       window.location.href = linker;
+      // } else {
+      // window.open(linker, "_blank");
+      // }
     },
   },
 };
