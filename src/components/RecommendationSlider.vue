@@ -180,7 +180,7 @@ export default {
   justify-content: center;
 }
 .regularDot {
-  /* cursor: pointer; */
+  cursor: pointer;
   margin: 0.5rem;
   background-color: #c5c6c7;
   height: 10px;
