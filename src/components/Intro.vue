@@ -4,7 +4,7 @@
       Software engineer && Fullstack developer
     </div>
     <div class="evgeni-intro-container--subtitle">
-      I build and code softwares, and I love what i'm doing!
+      I build and code softwares, and I love what I'm doing!
     </div>
     <div class="evgeni-intro-container--img">
       <img class="into-img" src="../assets/EvgeniPic.png" alt="Picture" />
