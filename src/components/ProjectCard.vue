@@ -66,10 +66,9 @@ export default {
         },
         {
           id: 6,
-          image: "animals",
-          summary:
-            "Educational game for toddlers that teachs about animal kingdom in English",
-          source: "https://github.com/Ivgesha/AnimalGame",
+          image: "email",
+          summary: "Multi-threaded Email transfer program",
+          source: "https://github.com/Ivgesha/Email_Queue",
         },
       ],
     };
