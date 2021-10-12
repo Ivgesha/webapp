@@ -52,7 +52,7 @@ export default {
         recommendation: [
           {
             recImg:
-              "https://media-exp1.licdn.com/dms/image/C4D03AQHnyXHat4qRHg/profile-displayphoto-shrink_100_100/0/1601020654678?e=1632960000&v=beta&t=CUH1Qpxx7GN0iwnOJFu0ZWYrKCvY_4f__B1FvAV3p0s",
+               "https://media-exp1.licdn.com/dms/image/C4D03AQHnyXHat4qRHg/profile-displayphoto-shrink_200_200/0/1601020654678?e=1639612800&v=beta&t=ihevBIxgiaoGcu16rFTeU4U8Rq62hFfUkb9r5-oEbhA",
             recAlt: "Gil",
             recName: "GiL Nagar",
             recPos: "System And Network Manager at 019Mobile",
@@ -62,7 +62,7 @@ export default {
           },
           {
             recImg:
-              "https://media-exp1.licdn.com/dms/image/C4E03AQHX9InGA_SPuw/profile-displayphoto-shrink_100_100/0/1549802056022?e=1632960000&v=beta&t=asJljt3ZJVoKsqKdG2_-y6hVBn48sF_WC8m8CfOZflk",
+             "https://media-exp1.licdn.com/dms/image/C4E03AQHX9InGA_SPuw/profile-displayphoto-shrink_200_200/0/1549802056022?e=1639612800&v=beta&t=_tLH2KO4jGbS3QQwQBUyFhGvw9f8ALM_Xx6wDjS77fI",
             recAlt: "Eliyahu Kriel",
             recPos: "Frontend Developer at Devalore",
             recPar:
